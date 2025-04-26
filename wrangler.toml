@@ -1,0 +1,22 @@
+name = "barra-moveis-site"
+main = "src/index.ts"
+compatibility_date = "2023-12-01"
+
+[site]
+bucket = "./public"
+
+[build]
+command = "npm run build"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "barra-moveis-db"
+database_id = "barra-moveis-db"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "barra-moveis-images"
+preview_bucket_name = "barra-moveis-images-preview"
+
+# Diretório de saída do build para o Pages
+pages_build_output_dir = ".next/standalone"
