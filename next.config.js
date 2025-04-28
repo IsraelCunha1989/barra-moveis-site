@@ -5,7 +5,8 @@ const nextConfig = {
     domains: ['pub-barra-moveis-images.r2.dev', 'pub-barra-moveis-images-preview.r2.dev'],
     unoptimized: true,
   },
-  output: 'standalone',
+  output: 'export',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
