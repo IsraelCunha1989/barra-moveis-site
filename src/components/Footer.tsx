@@ -26,7 +26,7 @@ export default function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                (47) 991508265
+                https://wa.me/5547991508265
               </p>
               <p className="flex items-center text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,8 +38,8 @@ export default function Footer() {
           </div>
           
           {/* Redes Sociais */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
+          <div>"https://www.instagram.com/valdirmoveisbarra
+            <h3 className="text-xl font-bold mb-4"https://www.instagram.com/valdirmoveisbarra/>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -63,8 +63,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Horário de Funcionamento</h3>
             <div className="space-y-2 text-gray-300">
-              <p>Segunda a Sexta: 9h às 18h</p>
-              <p>Sábado: 9h às 14h</p>
+              <p>Segunda a Sexta: 9h às 19h</p>
+              <p>Sábado: 9h às 17h</p>
               <p>Domingo: Fechado</p>
             </div>
           </div>
