@@ -23,25 +23,25 @@ export default function Header() {
             <nav className="hidden md:ml-6 md:flex md:space-x-8">
               <Link
                 href="/"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-primary hover:border-primary"
               >
                 Início
-              </Link>text-primary hover:border-primary
-              <Linktext-primary hover:border-primary
+              </Link>
+              <Link
                 href="/produtos"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-primary hover:border-primary"
               >
                 Produtos
               </Link>
               <Link
                 href="/sobre"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-primary hover:border-primary"
               >
                 Sobre
               </Link>
               <Link
                 href="/contato"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-primary hover:border-primary"
               >
                 Contato
               </Link>
@@ -66,13 +66,34 @@ export default function Header() {
                   />
                 </svg>
                 Fale conosco
-              </a>text-primary hover:border-primary
-            </div>text-primary hover:border-primary
+              </a>
+              
+              <Link
+                href="/admin/login"
+                className="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-primary bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary border-primary"
+              >
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="h-5 w-5 mr-2" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" 
+                  />
+                </svg>
+                Editar Conteúdo
+              </Link>
+            </div>
             
             <div className="flex md:hidden">
               <button
                 type="button"
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
                 onClick={toggleMobileMenu}
               >
                 <span className="sr-only">Abrir menu</span>
@@ -117,28 +138,28 @@ export default function Header() {
         <div className="pt-2 pb-3 space-y-1">
           <Link
             href="/"
-            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 hover:border-primary"
             onClick={toggleMobileMenu}
           >
             Início
           </Link>
           <Link
             href="/produtos"
-            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 hover:border-primary"
             onClick={toggleMobileMenu}
           >
             Produtos
           </Link>
           <Link
             href="/sobre"
-            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 hover:border-primary"
             onClick={toggleMobileMenu}
           >
             Sobre
           </Link>
           <Link
-            href="/contato https://wa.me/5547991508265"
-            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            href="/contato"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 hover:border-primary"
             onClick={toggleMobileMenu}
           >
             Contato
@@ -147,11 +168,18 @@ export default function Header() {
             href="https://wa.me/5547991508265"
             target="_blank"
             rel="noopener noreferrer"
-            className="block pl-3 pr-4 py-2 border-l-4 border-primary text-base font-medium text-primary-dark bg-primary-50"
+            className="block pl-3 pr-4 py-2 border-l-4 border-primary text-base font-medium text-primary bg-primary-light/20"
             onClick={toggleMobileMenu}
           >
             Fale conosco
           </a>
+          <Link
+            href="/admin/login"
+            className="block pl-3 pr-4 py-2 border-l-4 border-secondary text-base font-medium text-secondary bg-secondary-light/20"
+            onClick={toggleMobileMenu}
+          >
+            Editar Conteúdo
+          </Link>
         </div>
       </div>
     </header>

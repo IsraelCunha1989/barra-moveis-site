@@ -1,0 +1,50 @@
+/* Estilos personalizados para o logo da Barra Móveis */
+.logo-container {
+  border: 2px solid #0052CC; /* Azul como cor da borda */
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.logo-text {
+  color: #0052CC; /* Azul como cor do texto */
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Ajustes adicionais para garantir consistência de cores */
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+.footer {
+  background-color: #0052CC; /* Azul como cor de fundo do rodapé */
+  color: white;
+}
+
+.header-highlight {
+  color: #FFD700; /* Amarelo para destaques */
+}
+
+/* Ajustes para elementos específicos */
+.category-card {
+  border: 2px solid #0052CC; /* Azul para bordas de cartões de categoria */
+}
+
+.category-card:hover {
+  border-color: #FFD700; /* Amarelo ao passar o mouse */
+}
+
+/* Correção para qualquer elemento que ainda use as cores antigas */
+.green-element {
+  color: #0052CC !important; /* Substituir verde por azul */
+  border-color: #0052CC !important;
+  background-color: #0052CC !important;
+}
+
+.orange-element {
+  color: #FFD700 !important; /* Substituir laranja por amarelo */
+  border-color: #FFD700 !important;
+  background-color: #FFD700 !important;
+}

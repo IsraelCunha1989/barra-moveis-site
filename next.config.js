@@ -5,7 +5,7 @@ const nextConfig = {
     domains: ['pub-barra-moveis-images.r2.dev', 'pub-barra-moveis-images-preview.r2.dev'],
     unoptimized: true,
   },
-  output: 'export',
+  // output: 'export', // Removido para permitir rotas de API dinâmicas
   trailingSlash: true,
 }
 

@@ -276,9 +276,21 @@ export default function EditarProdutoComponent({ produtoId, isNew = false }: Edi
           
           {/* Descrição */}
           <div className="col-span-2">
-            <label htmlFor="descricao" className="block text-sm font-medium text-gray-700 mb-1">
-              Descrição *
-            </label>
+            <div className="flex justify-between items-center mb-1">
+              <label htmlFor="descricao" className="block text-sm font-medium text-gray-700">
+                Descrição *
+              </label>
+              <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('descricao')?.focus();
+                }}
+                className="text-sm text-primary hover:text-primary-dark"
+              >
+                Editar descrição
+              </a>
+            </div>
             <textarea
               id="descricao"
               name="descricao"
@@ -293,9 +305,21 @@ export default function EditarProdutoComponent({ produtoId, isNew = false }: Edi
           
           {/* Características */}
           <div className="col-span-2">
-            <label htmlFor="caracteristicas" className="block text-sm font-medium text-gray-700 mb-1">
-              Características
-            </label>
+            <div className="flex justify-between items-center mb-1">
+              <label htmlFor="caracteristicas" className="block text-sm font-medium text-gray-700">
+                Características
+              </label>
+              <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('caracteristicas')?.focus();
+                }}
+                className="text-sm text-primary hover:text-primary-dark"
+              >
+                Editar características
+              </a>
+            </div>
             <textarea
               id="caracteristicas"
               name="caracteristicas"
@@ -312,9 +336,21 @@ export default function EditarProdutoComponent({ produtoId, isNew = false }: Edi
           
           {/* Imagens */}
           <div className="col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Imagens do produto
-            </label>
+            <div className="flex justify-between items-center mb-1">
+              <label className="block text-sm font-medium text-gray-700">
+                Imagens do produto
+              </label>
+              <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('file-upload')?.click();
+                }}
+                className="text-sm text-primary hover:text-primary-dark"
+              >
+                Adicionar novas fotos
+              </a>
+            </div>
             <ImageGalleryComponent 
               initialImages={formData.imagens} 
               onImagesChange={handleImagesChange} 

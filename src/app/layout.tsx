@@ -1,31 +1,18 @@
-import { Inter, Poppins } from 'next/font/google';
-import './globals.css';
-import { ReactNode } from './custom-styles.css';
+import './custom-styles.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
-
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-});
-
-export const metadata = {
-  title: 'Barra Móveis - Móveis de qualidade para sua casa',
-  description: 'Encontre os melhores móveis para sua casa na Barra Móveis. Sofás, mesas, cadeiras, camas e muito mais com qualidade e preço justo.',
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="pt-BR">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+      </head>
       <body>
         {children}
       </body>
     </html>
-  );
+  )
 }

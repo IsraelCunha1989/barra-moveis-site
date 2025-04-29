@@ -33,26 +33,41 @@ export default function ImageGalleryComponent({ initialImages = [], onImagesChan
       </div>
       
       {images.length > 0 && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-          {images.map((image, index) => (
-            <div key={index} className="relative bg-gray-100 rounded-md overflow-hidden">
-              <img 
-                src={image} 
-                alt={`Imagem ${index + 1}`} 
-                className="w-full h-32 object-cover"
-              />
-              <button
-                type="button"
-                className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
-                onClick={() => handleRemoveImage(index)}
-                title="Remover imagem"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          ))}
+        <div>
+          <div className="flex justify-between items-center mb-2">
+            <h4 className="text-sm font-medium text-gray-700">Fotos do produto ({images.length})</h4>
+            <p className="text-xs text-gray-500">Clique em uma imagem para visualizá-la em tamanho maior</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+            {images.map((image, index) => (
+              <div key={index} className="relative bg-gray-100 rounded-md overflow-hidden group">
+                <a 
+                  href={image} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src={image} 
+                    alt={`Imagem ${index + 1}`} 
+                    className="w-full h-32 object-cover group-hover:opacity-90 transition-opacity"
+                  />
+                </a>
+                <div className="absolute top-2 right-2 flex space-x-1">
+                  <button
+                    type="button"
+                    className="bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                    onClick={() => handleRemoveImage(index)}
+                    title="Remover imagem"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
       
